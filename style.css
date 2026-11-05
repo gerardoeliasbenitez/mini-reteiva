@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Ajustes adicionales y capas de impresión limpias */
+@layer base {
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* Estilos específicos para impresión de comprobantes o PDF */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .pdf-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Transiciones suaves personalizadas */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
